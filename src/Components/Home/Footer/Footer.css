@@ -1,0 +1,22 @@
+.footer-top {
+  background-image: url(../../../images/footerbg.jpg);
+  background-size: cover;
+  height: 420px;
+}
+
+.social {
+  color: #0066ff;
+  font-size: 50px;
+  margin: 15px;
+}
+.contact p {
+  font-family: "Railway";
+  font-size: 25px;
+}
+
+.footer-logo {
+  color: #ffeb00;
+  font-size: 40px;
+  font-weight: 200;
+  font-family: "Times New Roman", Times, serif;
+}

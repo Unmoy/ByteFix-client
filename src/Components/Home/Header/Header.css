@@ -1,0 +1,6 @@
+.header-container {
+  height: 840px;
+  position: relative;
+  background-image: url("../../../images/ladybg.jpg");
+  background-size: cover;
+}

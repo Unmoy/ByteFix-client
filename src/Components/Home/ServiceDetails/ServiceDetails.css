@@ -1,0 +1,42 @@
+.card-design {
+  border: 1px solid yellowgreen;
+  padding: 55px;
+  width: 385px;
+  height: 311px;
+  margin: 10px;
+  background-image: linear-gradient(to right, #fffc00, #ffffff);
+  font-family: Railway;
+
+  transition: background-image 0.1s linear;
+}
+
+.card-design:hover {
+  background-image: linear-gradient(to bottom, #ffffff, #fffc00);
+}
+
+.link-btn {
+  background-image: linear-gradient(
+    to right,
+    #000000 0%,
+    #434343 51%,
+    #000000 100%
+  );
+}
+.link-btn {
+  margin-left: 25%;
+  padding: 10px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: whitesmoke;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.link-btn:hover {
+  background-position: right center; 
+  color: #fff;
+  text-decoration: none;
+}

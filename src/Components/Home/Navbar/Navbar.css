@@ -1,0 +1,11 @@
+.navigation {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #d6ed17ff;
+}
+.name-logo {
+  margin-left: 20px;
+  font-size: 40px;
+  font-weight: 200;
+  font-family: "Times New Roman", Times, serif;
+}

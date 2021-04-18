@@ -1,0 +1,11 @@
+.review-card {
+  background-image: url("../../../../images/quotation.png");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  padding: 20px;
+  margin: 5px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.review-card:hover {
+  box-shadow: 0 8px 6px -6px yellow;
+}

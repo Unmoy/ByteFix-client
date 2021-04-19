@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Sidebar from "../../Orders/Sidebar/Sidebar";
 
 const MakeAdmin = () => {
   const { register, handleSubmit } = useForm();
-  const [admin, setAdminMail] = useState({});
+  const [admin, setAdmin] = useState({});
 
-  const onSubmit = (data) => setAdminMail(data);
+  const onSubmit = (data) => {
+    console.log(data);
 
-  fetch("http://localhost:5000/addadmin", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(admin),
-  });
+    fetch("https://cryptic-shelf-29443.herokuapp.com/addadmin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+  };
 
   return (
     <div className="row">

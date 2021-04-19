@@ -36,7 +36,17 @@
 }
 
 .link-btn:hover {
-  background-position: right center; 
+  background-position: right center;
   color: #fff;
   text-decoration: none;
+}
+
+.service-icon {
+  transition: transform 0.2s;
+}
+
+.service-icon:hover {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }

@@ -34,14 +34,21 @@ const Login = () => {
         console.log(errorMessage);
       });
   };
+
   return (
-    <div className="btn">
-      <button onClick={handleGoogleSignIn} type="button" class="google-button">
-        <span class="google-button__icon google-button__icon--plus">
-          <FontAwesomeIcon icon={faGooglePlus}></FontAwesomeIcon>
-        </span>
-        <span class="google-button__text">Sign in with Google</span>
-      </button>
+    <div className="btn-container">
+      <div className=" d-flex justify-content-center align-items-center ">
+        <button
+          type="button"
+          onClick={handleGoogleSignIn}
+          class="btn btn-outline-warning btn-lg align-items-center google"
+        >
+          <span class="font-icon">
+            <FontAwesomeIcon icon={faGooglePlus}></FontAwesomeIcon>
+          </span>
+          GOOGLE SIGN IN
+        </button>
+      </div>
     </div>
   );
 };

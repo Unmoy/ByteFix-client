@@ -22,7 +22,7 @@ const Review = () => {
     formData.append("name", reviews.name);
     formData.append("comment", reviews.comment);
 
-    fetch("http://localhost:5000/addReviews", {
+    fetch("https://cryptic-shelf-29443.herokuapp.com/addReviews", {
       method: "POST",
       body: formData,
     })
@@ -43,6 +43,9 @@ const Review = () => {
       <div className="col-md-8  mt-3 mx-auto review-container p-3">
         <form onSubmit={handleSubmit}>
           <div class="mb-3">
+            <h2 style={{ fontFamily: "railway", textAlign: "center" }}>
+              TAKE A FEW MINUTES TO REVIEW US
+            </h2>
             <label for="exampleFormControlInput1" class="form-label">
               Name
             </label>

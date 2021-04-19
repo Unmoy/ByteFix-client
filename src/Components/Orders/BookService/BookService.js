@@ -20,7 +20,7 @@ const BookService = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/getservice/${id}`)
+    fetch(`https://cryptic-shelf-29443.herokuapp.com/getservice/${id}`)
       .then((res) => res.json())
       .then((data) => setServiceType(data));
   }, [id]);
@@ -39,7 +39,7 @@ const BookService = () => {
       OrderTime: new Date(),
     };
     console.log(orderDetails);
-    fetch("http://localhost:5000/addorder", {
+    fetch("https://cryptic-shelf-29443.herokuapp.com/addorder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

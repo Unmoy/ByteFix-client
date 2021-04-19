@@ -6,8 +6,13 @@ import ServiceListDetails from "../ServiceListDetails/ServiceListDetails";
 const ServiceList = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [serviceList, setServiceList] = useState([]);
+
   useEffect(() => {
-    fetch("")
+    fetch("https://cryptic-shelf-29443.herokuapp.com/showOrderedService", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ email: loggedInUser.email }),
+    })
       .then((res) => res.json())
       .then((data) => setServiceList(data));
   }, []);
@@ -17,10 +22,7 @@ const ServiceList = () => {
         <Sidebar></Sidebar>
       </div>
       <div className="col-md-6">
-        Functionality needs to be added
-        {/* {serviceList.map((sevicestatus) => (
-          <ServiceListDetails sevicestatus={sevicestatus}></ServiceListDetails>
-        ))} */}
+        <ServiceListDetails services={serviceList}></ServiceListDetails>
       </div>
     </div>
   );

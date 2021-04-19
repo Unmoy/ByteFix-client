@@ -13,8 +13,9 @@ import { UserContext } from "../../../App";
 const Sidebar = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [isAdmin, setIsAdmin] = useState(false);
+
   useEffect(() => {
-    fetch("http://localhost:5000/isAdmin", {
+    fetch("https://cryptic-shelf-29443.herokuapp.com/isAdmin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email: loggedInUser.email }),
@@ -28,24 +29,34 @@ const Sidebar = () => {
       style={{ height: "100vh" }}
     >
       <ul className="list-unstyled">
-        <li>
-          <Link to="" className="text-white text-decoration-none">
-            <FontAwesomeIcon icon={faTools} />{" "}
-            <span className="span">Service</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/servicelist" className="text-white text-decoration-none">
-            <FontAwesomeIcon icon={faToolbox} />
-            <span className="span">Service List</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/userReview" className="text-white text-decoration-none">
-            <FontAwesomeIcon icon={faComment} />
-            <span className="span">Review</span>
-          </Link>
-        </li>
+        {loggedInUser.email && (
+          <div>
+            <li>
+              <Link to="" className="text-white text-decoration-none">
+                <FontAwesomeIcon icon={faTools} />{" "}
+                <span className="span">Service</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/servicelist"
+                className="text-white text-decoration-none"
+              >
+                <FontAwesomeIcon icon={faToolbox} />
+                <span className="span">Service List</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/userReview"
+                className="text-white text-decoration-none"
+              >
+                <FontAwesomeIcon icon={faComment} />
+                <span className="span">Review</span>
+              </Link>
+            </li>
+          </div>
+        )}
         {isAdmin && (
           <div>
             <li>

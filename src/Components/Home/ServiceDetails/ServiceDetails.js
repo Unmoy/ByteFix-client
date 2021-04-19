@@ -10,7 +10,7 @@ const ServiceDetails = ({ service }) => {
       <div>
         <img
           style={{ height: "60px" }}
-          className="mb-3"
+          className="mb-3 service-icon"
           src={`data:image/png;base64,${service.image.img}`}
         />
         <h5 style={{ fontFamily: "Railway", fontWeight: "bold" }}>
@@ -19,8 +19,8 @@ const ServiceDetails = ({ service }) => {
         <p className="text-secondary">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, fuga.
         </p>
-        <Link to={"/service/" + service._id}>
-          <button className="link-btn"> Book Now</button>
+        <Link className="text-decoration-none" to={"/service/" + service._id}>
+          <button className="link-btn "> Book Now</button>
         </Link>
       </div>
     </div>

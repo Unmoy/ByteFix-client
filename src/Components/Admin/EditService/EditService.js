@@ -2,7 +2,7 @@ import React from "react";
 
 const EditService = ({ allservices }) => {
   const deleteService = (id) => {
-    fetch("http://localhost:5000/delete/" + id, {
+    fetch("https://cryptic-shelf-29443.herokuapp.com/delete/" + id, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json; charset=UTF-8",

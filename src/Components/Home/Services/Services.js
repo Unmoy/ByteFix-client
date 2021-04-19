@@ -7,7 +7,7 @@ import { useState } from "react";
 const Services = () => {
   const [servicesData, setServicesData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/showservice")
+    fetch("https://cryptic-shelf-29443.herokuapp.com/showservice")
       .then((res) => res.json())
       .then((data) => setServicesData(data));
   }, []);

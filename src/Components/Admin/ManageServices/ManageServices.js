@@ -6,7 +6,7 @@ import Sidebar from "../../Orders/Sidebar/Sidebar";
 const ManageServices = () => {
   const [allservices, setAllServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/showservice")
+    fetch("https://cryptic-shelf-29443.herokuapp.com/showservice")
       .then((res) => res.json())
       .then((data) => setAllServices(data));
   }, []);

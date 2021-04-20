@@ -1,0 +1,22 @@
+.exclusive-bg {
+  background-image: url("../../../images/exbg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+.text {
+  width: 200px;
+  font-size: 25px;
+  color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.btn {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+input::-webkit-input-placeholder {
+  color: whitesmoke;
+}

@@ -23,8 +23,8 @@ const Services = () => {
         </h4>
       </div>
 
-      <div className="d-flex justify-content-center">
-        <div className="row mt-5 w-75">
+      <div className="container d-flex justify-content-center ">
+        <div className="row w-100">
           {servicesData.map((service) => (
             <ServiceDetails service={service}></ServiceDetails>
           ))}

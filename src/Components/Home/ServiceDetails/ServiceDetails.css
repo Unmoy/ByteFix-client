@@ -6,7 +6,6 @@
   margin: 10px;
   background-image: linear-gradient(to right, #fffc00, #ffffff);
   font-family: Railway;
-
   transition: background-image 0.1s linear;
 }
 
@@ -22,23 +21,18 @@
     #000000 100%
   );
 }
-.link-btn {
-  margin-left: 25%;
-  padding: 10px 10px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: whitesmoke;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
+.btn_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.link-btn:hover {
-  background-position: right center;
+.link-btn {
+  padding: 9px 7px;
+  text-transform: uppercase;
+  background-size: 100% auto;
   color: #fff;
-  text-decoration: none;
+  border-radius: 5px;
+  border: none;
 }
 
 .service-icon {

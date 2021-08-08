@@ -11,7 +11,7 @@ const Contact = () => {
               color: "white",
               textAlign: "center",
               fontFamily: "railway",
-              fontSize: "35px",
+              fontSize: "30px",
             }}
           >
             SIGN UP FOR EXCLUSIVE UPDATES AND
@@ -21,7 +21,7 @@ const Contact = () => {
           <form class="input-group mb-3 text-center">
             <input
               type="text"
-              class="form-control bg-transparent border-success text "
+              class="form-control bg-transparent border-warning text "
               placeholder="Enter your email here*"
             />
             <button

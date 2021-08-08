@@ -1,7 +1,5 @@
 .exclusive-bg {
-  background-image: url("../../../images/exbg1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #262335;
   height: 400px;
 }
 .text {

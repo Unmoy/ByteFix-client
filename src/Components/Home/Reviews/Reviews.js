@@ -10,7 +10,7 @@ const Reviews = () => {
       .then((data) => setReviewDetails(data));
   }, []);
   return (
-    <section style={{ height: "500px" }}>
+    <section style={{ height: "500px", background: "#f5f5f5" }}>
       <div className="text-center pt-5">
         <h1
           style={{
@@ -22,7 +22,7 @@ const Reviews = () => {
           <strong>What People Say</strong>
         </h1>
       </div>
-      <div className="d-flex ">
+      <div className="d-flex container">
         <div className="row justify-content-center">
           {reviewDetails.map((review) => (
             <ReviewCard review={review}></ReviewCard>

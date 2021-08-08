@@ -75,7 +75,12 @@ const Footer = () => {
         </div>
       </div>
       <div
-        style={{ color: "#ffeb00", fontFamily: "Railway", fontSize: "15px" }}
+        style={{
+          color: "#ffeb00",
+          fontFamily: "Roboto",
+          fontSize: "20px",
+          paddingTop: "20px",
+        }}
         className="text-center"
       >
         <p>Copyright {new Date().getFullYear()} All Rights Reserved by Unmoy</p>

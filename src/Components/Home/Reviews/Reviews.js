@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import ReviewCard from "./ReviewsCard/ReviewCard";
 
 const Reviews = () => {

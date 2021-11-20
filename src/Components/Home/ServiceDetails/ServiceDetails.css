@@ -7,6 +7,7 @@
   background-image: linear-gradient(to right, #fffc00, #ffffff);
   font-family: Railway;
   transition: background-image 0.1s linear;
+  border-radius: 4px;
 }
 
 .card-design:hover {

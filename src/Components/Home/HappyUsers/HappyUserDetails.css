@@ -1,12 +1,10 @@
 .back-design {
-  background-color: #000000;
-  color: white;
+  background-color: #fff;
+  color: #000;
   font-weight: bold;
   z-index: 2;
   font-family: Railway;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 10px;
+  opacity: 0.5;
 }

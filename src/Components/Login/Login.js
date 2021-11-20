@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import firebaseConfig from "./firebase.config";
 import "firebase/auth";
 import firebase from "firebase/app";
@@ -34,7 +34,9 @@ const Login = () => {
         console.log(errorMessage);
       });
   };
-
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="btn-container">
       <div className=" d-flex justify-content-center align-items-center ">
@@ -46,7 +48,7 @@ const Login = () => {
           <span class="font-icon">
             <FontAwesomeIcon icon={faGooglePlus}></FontAwesomeIcon>
           </span>
-          GOOGLE SIGN IN
+          SIGN IN WITH GOOGLE
         </button>
       </div>
     </div>

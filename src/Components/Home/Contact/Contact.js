@@ -3,7 +3,7 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <section className="exclusive-bg">
+    <section className="exclusive-bg" id="contect">
       <div className="d-flex justify-content-center">
         <div className="row w-75 mt-5">
           <p

@@ -22,7 +22,7 @@ const Footer = () => {
             <p
               style={{
                 fontFamily: "Railway",
-                fontSize: "20px",
+                fontSize: "18px",
               }}
             >
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et,
@@ -32,7 +32,7 @@ const Footer = () => {
             <p>Our team</p>
           </div>
           <div className="col-md-5 text-white contact">
-            <h3 style={{ color: "#ffeb00", fontFamily: "Railway" }}>Contact</h3>
+            <h4 style={{ color: "#ffeb00", fontFamily: "Railway" }}>Contact</h4>
             <p>
               <FontAwesomeIcon
                 style={{ color: "#0066FF", marginRight: "10px" }}

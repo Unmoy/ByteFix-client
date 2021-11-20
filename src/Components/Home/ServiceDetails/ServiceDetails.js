@@ -11,6 +11,7 @@ const ServiceDetails = ({ service }) => {
             style={{ height: "60px" }}
             className="mb-3 service-icon"
             src={`data:image/png;base64,${service.image.img}`}
+            alt=""
           />
           <h5 style={{ fontFamily: "Railway", fontWeight: "bold" }}>
             {service.name}

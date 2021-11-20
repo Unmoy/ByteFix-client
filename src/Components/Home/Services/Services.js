@@ -12,7 +12,7 @@ const Services = () => {
       .then((data) => setServicesData(data));
   }, []);
   return (
-    <section className="bg-image ">
+    <section className="bg-image" id="services">
       <div className="text-center pt-5">
         <h2 style={{ color: "yellow", fontFamily: "Railway" }}>
           <strong>SERVICES</strong>

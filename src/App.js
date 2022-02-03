@@ -6,7 +6,7 @@ import AddService from "./Components/Admin/AddService/AddService";
 import Admin from "./Components/Admin/Admin/Admin";
 import ManageServices from "./Components/Admin/ManageServices/ManageServices";
 import Home from "./Components/Home/Home/Home";
-import MakeAdmin from "./Components/Admin/MakeAdmin/MakeAdmin";
+// import MakeAdmin from "./Components/Admin/MakeAdmin/MakeAdmin";
 import BookService from "./Components/Orders/BookService/BookService";
 import ServiceList from "./Components/Orders/Orders/ServiceList/ServiceList";
 import Review from "./Components/Orders/Review/Review";

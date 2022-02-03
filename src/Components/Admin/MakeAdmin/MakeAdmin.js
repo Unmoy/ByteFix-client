@@ -20,9 +20,9 @@ const MakeAdmin = () => {
 
   return (
     <div className="row">
-      <div className="col-md-2">
+      {/* <div className="col-md-2">
         <Sidebar></Sidebar>
-      </div>
+      </div> */}
       <div className="col-md-5 mt-3 mx-auto">
         <form onSubmit={handleSubmit(onSubmit)}>
           <label>Email</label>

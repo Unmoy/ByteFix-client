@@ -1,47 +1,79 @@
-.card-design {
-  border: 1px solid yellowgreen;
-  padding: 55px;
-  width: 385px;
-  height: 311px;
-  margin: 10px;
-  background-image: linear-gradient(to right, #fffc00, #ffffff);
-  font-family: Railway;
-  transition: background-image 0.1s linear;
-  border-radius: 4px;
-}
-
-.card-design:hover {
-  background-image: linear-gradient(to bottom, #ffffff, #fffc00);
-}
-
-.link-btn {
-  background-image: linear-gradient(
-    to right,
-    #000000 0%,
-    #434343 51%,
-    #000000 100%
-  );
-}
-.btn_div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.link-btn {
-  padding: 9px 7px;
-  text-transform: uppercase;
-  background-size: 100% auto;
-  color: #fff;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
+.service_box {
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 30px 25px;
+  overflow: hidden;
+  transition: 0.5s;
+  width: 335px;
+  height: 340px;
+  cursor: pointer;
   border-radius: 5px;
-  border: none;
+  background-image: linear-gradient(
+    to right top,
+    #d5fefd,
+    #e0fdff,
+    #effbff,
+    #fbfaff,
+    #fffcff
+  );
+  border: 2px solid #c5fffd;
 }
-
-.service-icon {
+.service_box:hover {
+  background-image: linear-gradient(
+    to left,
+    #d5fefd,
+    #e0fdff,
+    #effbff,
+    #fbfaff,
+    #fffcff
+  );
+  transition: 0.5s;
+}
+.service_icon {
+  margin-bottom: 25px;
+  width: 60px;
+  height: 60px;
+}
+.service_icon img {
+  max-width: 100%;
+}
+.service_icon {
   transition: transform 0.2s;
 }
 
-.service-icon:hover {
+.service_icon:hover {
   -ms-transform: scale(1.5);
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
+}
+.service_box h2 {
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.8px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+}
+.service_box p {
+  color: #6084a4;
+  line-height: 1.9;
+  font-size: 14px;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+.book_now_btn {
+  display: inline-block;
+  color: #20c997;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.5s;
+  box-shadow: #a6f5be 0px 0.0625em 0.0625em, #a6f5be 0px 0.125em 0.5em,
+    #a6f5be 0px 0px 0px 1px inset;
+  padding: 8px 20px;
+}
+
+.book_now_btn:hover {
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
 }

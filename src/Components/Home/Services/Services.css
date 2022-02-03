@@ -1,3 +1,11 @@
-.bg-image {
-  background-color: #262335;
+.services_wrapper {
+  background: linear-gradient(
+    to left bottom,
+    #fffcff,
+    #fbfaff,
+    #effbff,
+    #e0fdff,
+    #d5fefd
+  );
+  margin-bottom: 50px;
 }

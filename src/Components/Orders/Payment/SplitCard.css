@@ -1,0 +1,29 @@
+.split_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+}
+.split_card label {
+  /* border: 1px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  margin: 5px;
+}
+.split_card button {
+  padding: 0.6rem 3rem;
+  /* background: linear-gradient(to right, #7b4397, #dc2430); */
+  background-color: #ec1e79;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+.labelcvc {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}

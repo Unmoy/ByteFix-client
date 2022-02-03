@@ -1,0 +1,71 @@
+.service_details_header {
+  background: transparent url(../../../images/serviceDetails/banner-bg1.jpg)
+    right top no-repeat;
+  padding-top: 190px;
+  padding-bottom: 100px;
+  text-align: center;
+  font-family: "Poppins";
+}
+.service_details_header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.service_details_description {
+  font-family: "Poppins";
+}
+
+.service_details_wrapper {
+  padding-top: 100px;
+}
+.service_details_description span {
+  display: inline-block;
+  color: #000;
+  background-color: #f5dffd;
+  margin-bottom: 18px;
+  border-radius: 30px;
+  padding: 5px 20px 4px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.service_details_description h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.service_details_description p {
+  color: #6084a4;
+  line-height: 1.9;
+}
+.service_details_image {
+  text-align: center;
+}
+.service_details_image img {
+  max-width: 100%;
+}
+.service_details_book_now_btn .link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.service_details_book_now_btn button {
+  background: #c679e3;
+  border: 2px dashed #cdf1d8;
+  padding: 12px 33px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  border-radius: 0 4px 4px 0;
+  color: #fff;
+}
+.service_details_book_now_btn button:hover {
+  background-color: #44ce6f;
+  border-radius: 4px 0 0 4px;
+  color: #000;
+}

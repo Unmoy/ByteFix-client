@@ -1,21 +1,144 @@
-.footer-top {
-  background-color: #000000;
-  height: 450px;
+.footer_wrapper {
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  width: 100%;
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  line-height: 20px;
 }
-
-.social {
-  color: #0066ff;
-  font-size: 30px;
-  margin: 15px;
+.line {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.contact p {
-  font-family: "Railway";
-  font-size: 18px;
+.chain {
+  flex-basis: 25%;
+  padding: 10px;
 }
-
+.chain:nth-child(2),
+.chain:nth-child(3) {
+  flex-basis: 15%;
+}
 .footer-logo {
   color: #ffeb00;
   font-size: 40px;
   font-weight: 200;
   font-family: "Times New Roman", Times, serif;
+}
+.chain h3 {
+  width: fit-content;
+  margin-bottom: 30px;
+}
+.email_id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+.chain ul {
+  margin: 0;
+  padding: 0;
+}
+.chain ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+.chain ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.chain form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  /* margin-bottom: 50px; */
+}
+.chain .icon1 {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.chain input {
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  outline: none;
+}
+.chain button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.chain .icon2 {
+  font-size: 16px;
+  color: #ccc;
+}
+.social_icons_wrapper {
+  margin-top: 20px;
+  width: fit-content;
+}
+.social_icons_wrapper .social_icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  color: #000;
+  background-color: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.social_icon {
+  font-size: 20px;
+  padding: 9px;
+}
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.copyright {
+  text-align: center;
+}
+.underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.underline span {
+  width: 15px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .chain {
+    flex-basis: 100%;
+  }
+  .chain:nth-child(2),
+  .chain:nth-child(3) {
+    flex-basis: 100%;
+  }
 }

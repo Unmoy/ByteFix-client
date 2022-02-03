@@ -9,30 +9,30 @@ import {
   faTools,
 } from "@fortawesome/free-solid-svg-icons";
 import { UserContext } from "../../../App";
-
+import { useParams } from "react-router";
 const Sidebar = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [isAdmin, setIsAdmin] = useState(false);
 
-  useEffect(() => {
-    fetch("https://cryptic-shelf-29443.herokuapp.com/isAdmin", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ email: loggedInUser.email }),
-    })
-      .then((res) => res.json())
-      .then((data) => setIsAdmin(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://cryptic-shelf-29443.herokuapp.com/isAdmin", {
+  //     method: "POST",
+  //     headers: { "content-type": "application/json" },
+  //     body: JSON.stringify({ email: loggedInUser.email }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => setIsAdmin(data));
+  // }, []);
   return (
     <div
       className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4"
       style={{ height: "100vh" }}
     >
-      <ul className="list-unstyled">
+      {/* <ul className="list-unstyled">
         {loggedInUser.email && (
           <div>
             <li>
-              <Link to="" className="text-white text-decoration-none">
+              <Link to="/" className="text-white text-decoration-none">
                 <FontAwesomeIcon icon={faTools} />{" "}
                 <span className="span">Service</span>
               </Link>
@@ -88,7 +88,7 @@ const Sidebar = () => {
             </li>
           </div>
         )}
-      </ul>
+      </ul> */}
     </div>
   );
 };

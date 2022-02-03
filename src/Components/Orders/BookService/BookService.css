@@ -1,3 +1,82 @@
-.order-container {
-  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
+.book {
+  height: 100vh;
+  background-color: #e8eaf6;
+}
+.book_order_wrapper {
+  /* border: 2px solid #44ce6f; */
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+  width: 80%;
+}
+.book_order_wrapper span {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: #ff0000;
+  display: block;
+}
+.creditCardImage {
+  position: relative;
+  width: 300px;
+  height: 250px;
+}
+.creditCardImage img {
+  max-width: 100%;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  top: -20%;
+  left: 15%;
+}
+.billing {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 47px;
+}
+.billings_card {
+  padding: 10px;
+}
+.billings_card input {
+  min-width: 300px;
+}
+.billings_card label {
+  font-family: "Poppins";
+}
+.book_order_wrapper h3 {
+  font-family: "Poppins";
+  font-size: 24px;
+  color: #8e2889;
+}
+.order_recap {
+  font-family: "Poppins";
+}
+.order_recap label {
+  padding: 3px;
+  font-size: 16px;
+}
+.order_recap span {
+  padding: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ec1e79;
+}
+.book_order_wrapper hr {
+  color: #ec1e79;
+}
+@media only screen and (max-width: 600px) {
+  .book {
+    height: 100%;
+  }
+  .billing {
+    display: flex;
+    flex-direction: column;
+  }
+  .creditCardImage {
+    display: none;
+  }
+  .order_recap {
+    /* margin-top: 220px; */
+  }
 }

@@ -1,0 +1,50 @@
+.feature_box {
+  cursor: pointer;
+  padding: 20px 15px;
+  text-align: center;
+  transition: 0.5s;
+  position: relative;
+  margin-bottom: 30px;
+  z-index: 1;
+  border: 1px solid #c5fffd;
+  border-radius: 5px;
+  background: linear-gradient(
+    to right top,
+    #d5fefd,
+    #e0fdff,
+    #effbff,
+    #fbfaff,
+    #fffcff
+  );
+}
+.feature_icon img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.feature_box h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.feature_box h3:hover {
+  color: #20c997;
+}
+.feature_box p {
+  color: #6084a4;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+  font-size: 14px;
+}
+
+.learn-more-btn:hover {
+  color: #20c997;
+  text-decoration: none;
+}
+.learn-more-btn {
+  color: #365267;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.5s;
+}

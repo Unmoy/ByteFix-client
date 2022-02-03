@@ -1,28 +1,30 @@
 import React, { useState } from "react";
-import Sidebar from "../Sidebar/Sidebar";
 import "./Review.css";
-
+import axios from "axios";
 const Review = () => {
   const [reviews, setReviews] = useState("");
-  const [file, setFile] = useState(null);
-
+  const [image, setImage] = useState(null);
   const handleBlur = (e) => {
     const userEvaluation = { ...reviews };
     userEvaluation[e.target.name] = e.target.value;
     setReviews(userEvaluation);
   };
-  const handleChange = (e) => {
-    const consumerImage = e.target.files[0];
-    setFile(consumerImage);
-  };
 
+  const handleImageUpload = (event) => {
+    const uploadImage = new FormData();
+    uploadImage.set("key", "7142aa65148ce83ee1a45db6c5c39cea");
+    uploadImage.append("image", event.target.files[0]);
+    axios.post("https://api.imgbb.com/1/upload", uploadImage).then((res) => {
+      setImage(res.data.data.display_url);
+      console.log(res.data.data.display_url);
+    });
+  };
   const handleSubmit = () => {
     const formData = new FormData();
-    formData.append("file", file);
+    formData.append("imageUrl", image);
     formData.append("name", reviews.name);
     formData.append("comment", reviews.comment);
-
-    fetch("https://cryptic-shelf-29443.herokuapp.com/addReviews", {
+    fetch("http://localhost:5000/addReviews", {
       method: "POST",
       body: formData,
     })
@@ -36,53 +38,49 @@ const Review = () => {
   };
 
   return (
-    <div className="row ">
-      <div className="col-md-2 ">
-        <Sidebar></Sidebar>
-      </div>
-      <div className="col-md-8  mt-3 mx-auto review-container p-3">
+    <div className="row ml-5">
+      <div className="col-md-8 mt-3 mx-auto review-container p-3 ">
         <form onSubmit={handleSubmit}>
-          <div class="mb-3">
+          <div className="mb-3">
             <h2 style={{ fontFamily: "railway", textAlign: "center" }}>
               TAKE A FEW MINUTES TO REVIEW US
             </h2>
-            <label for="exampleFormControlInput1" class="form-label">
+            <label for="exampleFormControlInput1" className="form-label">
               Name
             </label>
             <input
               onBlur={handleBlur}
               type="text"
-              class="form-control"
+              className="form-control"
               name="name"
               id="exampleFormControlInput1"
               placeholder="Type your name"
             />
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">
+          <div className="mb-3">
+            <label for="exampleFormControlTextarea1" className="form-label">
               Comment
             </label>
             <textarea
               onBlur={handleBlur}
-              class="form-control"
+              className="form-control"
               name="comment"
               id="exampleFormControlTextarea1"
               rows="3"
             ></textarea>
           </div>
-          <div class="mb-3">
-            <label for="formFileSm" class="form-label">
+
+          <div className="mb-3">
+            <label for="formFileSm" className="form-label">
               Upload your image
             </label>
             <input
-              onChange={handleChange}
-              name="file"
-              class="form-control form-control-sm"
-              id="formFileSm"
+              onChange={handleImageUpload}
+              className="form-control form-control-sm"
               type="file"
             />
           </div>
-          <button type="submit" class="btn btn-outline-warning">
+          <button type="submit" className="btn btn-outline-warning">
             Submit
           </button>
         </form>

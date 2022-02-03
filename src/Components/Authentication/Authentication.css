@@ -1,0 +1,16 @@
+.page_font {
+  font-family: "Poppins", sans-serif;
+}
+.signup_google {
+  font-family: "Poppins", sans-serif;
+  border: 2px solid blue;
+  border-radius: 4px;
+  padding: 8px 15px !important;
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: transparent;
+  margin-top: 20px;
+}

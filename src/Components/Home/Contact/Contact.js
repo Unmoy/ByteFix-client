@@ -1,37 +1,33 @@
 import React from "react";
 import "./Contact.css";
-
+import image from "../../../images/newsletter/newsletter.png";
 const Contact = () => {
   return (
-    <section className="exclusive-bg" id="contect">
-      <div className="d-flex justify-content-center">
-        <div className="row w-75 mt-5">
-          <p
-            style={{
-              color: "white",
-              textAlign: "center",
-              fontFamily: "railway",
-              fontSize: "30px",
-            }}
-          >
-            SIGN UP FOR EXCLUSIVE UPDATES AND
-            <br />
-            OFFERS FROM THE BYTEFIX TEAM
-          </p>
-          <form class="input-group mb-3 text-center">
-            <input
-              type="text"
-              class="form-control bg-transparent border-warning text "
-              placeholder="Enter your email here*"
-            />
-            <button
-              class="btn btn-outline-warning btn"
-              type="button"
-              id="button-addon2"
-            >
-              Submit
-            </button>
-          </form>
+    <section>
+      <div className="container-fluid newsletter">
+        <div className="row align-items-center">
+          <div className="col-lg-6 col-md-12">
+            <div className="newsletter_image">
+              <img src={image} alt="newsletter_image" />
+            </div>
+          </div>
+          <div className="col-lg-6 col-md-12">
+            <div className="newsletter_content">
+              <h2>Start your free trial</h2>
+              <form className="newsletter_form">
+                <input
+                  type="text"
+                  className="newsletter_input"
+                  placeholder="Enter your business email here"
+                />
+                <button> Sign Up free</button>
+              </form>
+              <p>
+                Test out the Machine Learning features for 14 days, no credit
+                card required.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

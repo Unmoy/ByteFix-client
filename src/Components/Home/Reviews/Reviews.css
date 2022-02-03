@@ -1,0 +1,92 @@
+.testimonial_wrapper {
+  padding: 80px 50px;
+  background: linear-gradient(
+    to right top,
+    #d5fefd,
+    #e0fdff,
+    #effbff,
+    #fbfaff,
+    #fffcff
+  );
+  font-family: "Poppins";
+}
+.testimonial_header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.testimonial_header h3 {
+  margin-bottom: 0;
+  text-transform: capitalize;
+  font-size: 28px;
+  font-weight: 600;
+  color: #0e314c;
+}
+.testimonial_header p {
+  max-width: 520px;
+  margin: 0 auto;
+  color: #6084a4;
+  line-height: 1.9;
+}
+
+.testimonial .slick-dots li {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+.testimonial .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+  margin: 0 3px;
+  transition: 0.5s;
+  border: 1px solid #8d95a7;
+  border-radius: 50%;
+  position: relative;
+}
+
+.testimonial .slick-dots li.slick-active button {
+  border-color: #44ce6f;
+  background-color: transparent;
+}
+.testimonial .slick-dots li:hover button,
+.testimonial .slick-dots li.active button {
+  background: #44ce6f;
+}
+
+/* .testimonial .slick-dots li:hover button::before,
+.testimonial .slick-dots li.slick-active button::before {
+} */
+.testimonial .slick-dots li button:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #44ce6f;
+  content: "";
+  transition: 0.5s;
+  border-radius: 50%;
+  transform: scale(1);
+}
+.testimonial .slick-dots li.slick-active button:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #44ce6f;
+  content: "";
+  transition: 0.5s;
+  border-radius: 50%;
+  transform: scale(0);
+}

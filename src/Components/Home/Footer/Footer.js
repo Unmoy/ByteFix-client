@@ -5,86 +5,91 @@ import {
   faEnvelope,
   faMapMarkedAlt,
   faPhone,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
   faInstagram,
   faGooglePlusG,
+  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
 const Footer = () => {
   return (
-    <footer className="footer-top ">
-      <div className="container d-flex justify-content-center">
-        <div className="row align-items-center mt-5 pt-5">
-          <div className="col-md-4 text-white ">
-            <h1 className="footer-logo">ByteFix</h1>
-            <p
-              style={{
-                fontFamily: "Railway",
-                fontSize: "18px",
-              }}
-            >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et,
-              officiis repellendus libero omnis labore sunt iure voluptatum odit
-              vel consequuntur
-            </p>
-            <p>Our team</p>
-          </div>
-          <div className="col-md-5 text-white contact">
-            <h4 style={{ color: "#ffeb00", fontFamily: "Railway" }}>Contact</h4>
-            <p>
-              <FontAwesomeIcon
-                style={{ color: "#0066FF", marginRight: "10px" }}
-                icon={faMapMarkedAlt}
-              />
-              5604 Willow Crossing Ct, Clifton, VA, 20124
-            </p>
-            <p>
-              <FontAwesomeIcon
-                style={{ color: "#0066FF", marginRight: "10px" }}
-                icon={faPhone}
-              />
-              +1-800-1234567
-            </p>
-            <p>
-              <FontAwesomeIcon
-                style={{ color: "#0066FF", marginRight: "10px" }}
-                icon={faEnvelope}
-              />
-              noreply@unmoy.com
-            </p>
-            <p>
-              <FontAwesomeIcon
-                style={{ color: "#0066FF", marginRight: "10px" }}
-                icon={faClock}
-              />
-              Mon-Fri: 7:00am-7:00pm
-              <br />
-              Sat-Sun: 10:00am-5:00pm
-            </p>
-          </div>
-          <div className="col-md-3">
-            <h3 style={{ color: "#ffeb00", fontFamily: "Railway" }}>
-              Follow Us
-            </h3>
-            <FontAwesomeIcon className="social" icon={faFacebookF} />
-            <FontAwesomeIcon className="social" icon={faInstagram} />
-            <FontAwesomeIcon className="social" icon={faGooglePlusG} />
+    <footer className="footer_wrapper">
+      <div className="line">
+        <div className="chain">
+          {/* <img src="" alt="logo" />*/}
+          <h1 className="footer-logo">ByteFix</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vero
+            sit, impedit vitae neque iste doloribus blanditiis alias. Quo,
+            ducimus!
+          </p>
+        </div>
+        <div className="chain">
+          <h3>
+            Office
+            <div className="underline">
+              <span></span>
+            </div>
+          </h3>
+          <p>Lorem, ipsum</p>
+          <p>Lorem ipsum dolor sit</p>
+          <p className="email_id">webfx221@outlook.com</p>
+          <p>+91 - 925852136</p>
+        </div>
+        <div className="chain">
+          <h3>
+            Links
+            <div className="underline">
+              <span></span>
+            </div>
+          </h3>
+          <ul>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Home</a>
+            </li>
+          </ul>
+        </div>
+        <div className="chain">
+          <h3>
+            Newsletter
+            <div className="underline">
+              <span></span>
+            </div>
+          </h3>
+          <form>
+            <FontAwesomeIcon icon={faEnvelope} className="icon1" />
+            <input type="text" placeholder="Enter you email" />
+            <button>
+              <FontAwesomeIcon icon={faArrowRight} className="icon2" />
+            </button>
+          </form>
+          <div className="social_icons_wrapper">
+            <FontAwesomeIcon icon={faFacebookF} className="social_icon" />
+            <FontAwesomeIcon icon={faInstagram} className="social_icon" />
+            <FontAwesomeIcon icon={faGooglePlusG} className="social_icon" />
+            <FontAwesomeIcon icon={faWhatsapp} className="social_icon" />
           </div>
         </div>
       </div>
-      <div
-        style={{
-          color: "#ffeb00",
-          fontFamily: "Roboto",
-          fontSize: "20px",
-          paddingTop: "20px",
-        }}
-        className="text-center"
-      >
-        <p>Copyright {new Date().getFullYear()} All Rights Reserved by Unmoy</p>
-      </div>
+      <hr />
+      <p className="copyright">
+        Copyright @2021 WebFx. All Rights Reserved by Unmoy
+      </p>
     </footer>
   );
 };

@@ -1,0 +1,16 @@
+.delete_btn {
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #b621fe;
+  border-radius: 4px;
+  padding: 5px 10px !important;
+  text-align: center;
+  font-size: 15px;
+  color: #b621fe;
+  font-weight: 500;
+  background: #fff;
+}
+.delete_btn:hover {
+  background: #b621fe;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}

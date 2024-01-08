@@ -1,47 +1,40 @@
 import React from "react";
-
+import "./EditService.css";
 const EditService = ({ allservices }) => {
   const deleteService = (id) => {
-    fetch("https://cryptic-shelf-29443.herokuapp.com/delete/" + id, {
+    fetch("https://byte-fix-server.vercel.app/delete/" + id, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     })
       .then((res) => res.json())
-      .then((result) => alert("deleted succesfully"));
+      .then((result) => alert("Deleted"));
   };
   return (
-    <table className="table  table-warning table-stripe">
-      <thead>
+    <table className="table">
+      <thead className="thead-primary">
         <tr>
-          <th className="text-secondary text-left" scope="col">
-            Sr No
-          </th>
-          <th className="text-secondary" scope="col">
-            Name
-          </th>
-          <th className="text-secondary" scope="col">
-            Price
-          </th>
-          <th className="text-secondary" scope="col">
-            Manage
-          </th>
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Manage</th>
         </tr>
       </thead>
       <tbody>
         {allservices.map((item, index) => (
-          <tr className="table-warning table-stripe">
-            <td>{index + 1}</td>
+          <tr>
+            <th scope="row" className="text-center scope">
+              {index + 1}
+            </th>
             <td>{item.name}</td>
             <td>{item.price}</td>
             <td>
               <button
                 onClick={() => deleteService(item._id)}
-                type="button"
-                class="btn btn-outline-warning btn-sm"
+                className="delete_btn"
               >
-                Delete
+                Remove
               </button>
             </td>
           </tr>

@@ -78,12 +78,12 @@ const SplitCard = ({ handlePayment }) => {
         </div>
         <div>
           {paymentError && (
-            <div class="alert alert-danger" role="alert">
+            <div className="alert alert-danger" role="alert">
               {paymentError}
             </div>
           )}
           {paymentSuccess && (
-            <div class="alert alert-success" role="alert">
+            <div className="alert alert-success" role="alert">
               Your payment was Successful. Headover to
               <Link to="/dashboard">Dashboard</Link> for all details.
             </div>

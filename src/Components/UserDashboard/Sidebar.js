@@ -1,20 +1,52 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faTimes,
+  faDesktop,
+  faList,
+  faStar,
+  faClipboard,
+  faHandsHelping,
+  faComments,
+  faUserAstronaut,
+  faFolderPlus,
+  faPaintBrush,
+  faLayerGroup,
+} from "@fortawesome/free-solid-svg-icons";
+
 import { Link } from "react-router-dom";
 import MenuItems from "./MenuItems";
-
-export const menuItems = [
-  { name: "Monitor", to: "monitor" },
-  { name: "My Services", to: "servicelist" },
-  { name: "Add Review", to: "userReview" },
-  { name: "Configure", to: "configure" },
-  { name: "Settings", to: "settings" },
-  { name: "Help", to: "help" },
+import { useAuth } from "../contexts/AuthContext";
+export const userMenuItems = [
+  { iconName: faDesktop, name: "Monitor", to: "monitor" },
+  { iconName: faList, name: "Services", to: "servicelist" },
+  { iconName: faComments, name: "Review", to: "userReview" },
+  { iconName: faClipboard, name: "Configure", to: "configure" },
+  { iconName: faStar, name: "Settings", to: "settings" },
+  { iconName: faHandsHelping, name: "Help", to: "help" },
+];
+export const adminMenuItems = [
+  { iconName: faDesktop, name: "Monitor", to: "monitor" },
+  { iconName: faUserAstronaut, name: "Add Admin", to: "makeadmin" },
+  { iconName: faFolderPlus, name: "Add Service", to: "addservice" },
+  { iconName: faPaintBrush, name: "Manage", to: "manage" },
+  { iconName: faLayerGroup, name: "All Orders", to: "allorders" },
 ];
 const Sidebar = () => {
   const [navbarState, setNavbarState] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const { currentUser } = useAuth();
+  useEffect(() => {
+    fetch("https://byte-fix-server.vercel.app/isAdmin", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ email: currentUser.user_email }),
+    })
+      .then((res) => res.json())
+      .then((data) => setIsAdmin(data));
+  }, [currentUser.user_email]);
   return (
     <div>
       <>
@@ -22,7 +54,9 @@ const Sidebar = () => {
           <div className="top">
             <div className="brand">
               <span>
-                <Link to="/">MY TAXI</Link>
+                <Link to="/" className="brand_link">
+                  Red Fox
+                </Link>
               </span>
             </div>
             <div className="toggle">
@@ -42,35 +76,67 @@ const Sidebar = () => {
               )}
             </div>
             <div className="links">
-              <ul>
-                {menuItems.map((menuItem, index) => (
-                  <MenuItems
-                    key={index}
-                    name={menuItem.name}
-                    to={menuItem.to}
-                  />
-                ))}
-              </ul>
+              {isAdmin === true ? (
+                <ul>
+                  {adminMenuItems.map((menuItem, index) => (
+                    <MenuItems
+                      key={index}
+                      name={menuItem.name}
+                      to={menuItem.to}
+                      iconName={menuItem.iconName}
+                    />
+                  ))}
+                </ul>
+              ) : (
+                <ul>
+                  {userMenuItems.map((menuItem, index) => (
+                    <MenuItems
+                      key={index}
+                      name={menuItem.name}
+                      to={menuItem.to}
+                      iconName={menuItem.iconName}
+                    />
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
-          {/* <div className="logout">
-            <a href="#">
+          <div className="logout">
+            <a href="/">
               <span className="logout">Logout</span>
             </a>
-          </div> */}
+          </div>
         </section>
         <section id="navbar" className={navbarState ? "show" : ""}>
           <div className="">
             <span>
-              <Link to="/">MY TAXI</Link>
+              <Link to="/">Red Fox Servies</Link>
             </span>
           </div>
           <div className="responsive__links">
-            <ul>
-              {menuItems.map((menuItem, index) => (
-                <MenuItems key={index} name={menuItem.name} to={menuItem.to} />
-              ))}
-            </ul>
+            {isAdmin === true ? (
+              <ul>
+                {adminMenuItems.map((menuItem, index) => (
+                  <MenuItems
+                    key={index}
+                    name={menuItem.name}
+                    to={menuItem.to}
+                    iconName={menuItem.iconName}
+                  />
+                ))}
+              </ul>
+            ) : (
+              <ul>
+                {userMenuItems.map((menuItem, index) => (
+                  <MenuItems
+                    key={index}
+                    name={menuItem.name}
+                    to={menuItem.to}
+                    iconName={menuItem.iconName}
+                  />
+                ))}
+              </ul>
+            )}
           </div>
         </section>
       </>

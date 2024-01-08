@@ -1,7 +1,9 @@
 import React from "react";
 
 const Settings = () => {
-  return <div>Settings</div>;
+  return (
+    <div className="d-flex justify-content-center fs-1 fw-bold">Settings</div>
+  );
 };
 
 export default Settings;

@@ -10,7 +10,7 @@ const FearturesCard = ({ feature }) => {
         </div>
         <h3>{title}</h3>
         <p>{description}</p>
-        <a href="#" className="learn-more-btn">
+        <a href="/" className="learn-more-btn">
           Learn More
         </a>
       </div>

@@ -8,4 +8,16 @@
     #d5fefd
   );
   margin-bottom: 50px;
+  padding-top: 50px;
+  font-family: "Poppins";
+}
+.services_wrapper h2 {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-size: 27px;
+  font-weight: 600;
+}
+.services_wrapper p {
+  padding-bottom: 10px;
+  font-size: 20px;
 }

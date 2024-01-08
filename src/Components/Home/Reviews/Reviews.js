@@ -16,15 +16,15 @@ const Reviews = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  console.log(reviewDetails);
+
   useEffect(() => {
-    fetch("https://cryptic-shelf-29443.herokuapp.com/showreviews")
+    fetch("https://byte-fix-server.vercel.app/showreviews")
       .then((res) => res.json())
       .then((data) => setReviewDetails(data));
   }, []);
 
   return (
-    <section className="testimonial_wrapper ">
+    <section className="testimonial_wrapper" id="testimonial">
       <div className="testimonial_header">
         <h3>Our Clients Feedback</h3>
         <div className="bar"></div>
@@ -41,8 +41,8 @@ const Reviews = () => {
       >
         <div className="testimonial" style={{ width: "50%" }}>
           <Slider {...settings}>
-            {reviewDetails.map((review) => {
-              return <ReviewCard review={review} />;
+            {reviewDetails.map((review, index) => {
+              return <ReviewCard key={index} review={review} />;
             })}
           </Slider>
         </div>

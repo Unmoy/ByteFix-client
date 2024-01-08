@@ -1,12 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import {
-  faClock,
-  faEnvelope,
-  faMapMarkedAlt,
-  faPhone,
-  faArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
   faInstagram,
@@ -19,7 +13,6 @@ const Footer = () => {
     <footer className="footer_wrapper">
       <div className="line">
         <div className="chain">
-          {/* <img src="" alt="logo" />*/}
           <h1 className="footer-logo">ByteFix</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vero
@@ -36,7 +29,7 @@ const Footer = () => {
           </h3>
           <p>Lorem, ipsum</p>
           <p>Lorem ipsum dolor sit</p>
-          <p className="email_id">webfx221@outlook.com</p>
+          <p className="email_id">byteFix221@outlook.com</p>
           <p>+91 - 925852136</p>
         </div>
         <div className="chain">
@@ -48,19 +41,19 @@ const Footer = () => {
           </h3>
           <ul>
             <li>
-              <a href="">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="">Home</a>
+              <a href="/">Home</a>
             </li>
           </ul>
         </div>
@@ -88,7 +81,7 @@ const Footer = () => {
       </div>
       <hr />
       <p className="copyright">
-        Copyright @2021 WebFx. All Rights Reserved by Unmoy
+        Copyright @2021 ByteFix. All Rights Reserved by Unmoy
       </p>
     </footer>
   );

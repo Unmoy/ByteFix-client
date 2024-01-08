@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import Sidebar from "../../Orders/Sidebar/Sidebar";
-
+import "./MakeAdmin.css";
 const MakeAdmin = () => {
   const { register, handleSubmit } = useForm();
-  const [admin, setAdmin] = useState({});
 
   const onSubmit = (data) => {
-    console.log(data);
-
-    fetch("https://cryptic-shelf-29443.herokuapp.com/addadmin", {
+    fetch("https://byte-fix-server.vercel.app/addadmin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -19,18 +15,23 @@ const MakeAdmin = () => {
   };
 
   return (
-    <div className="row">
-      {/* <div className="col-md-2">
-        <Sidebar></Sidebar>
-      </div> */}
-      <div className="col-md-5 mt-3 mx-auto">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <label>Email</label>
-          <input className="form-control" {...register("adminemail")} />
-          <button type="submit" class="btn btn-outline-warning btn-sm mt-3">
-            Add
-          </button>
-        </form>
+    <div className="container">
+      <div className="row">
+        <div className="col-md-10 mx-auto">
+          <div className="makeAdmin_content">
+            <h2>Add a new Admin</h2>
+            <form onSubmit={handleSubmit(onSubmit)} className="makeAdmin_form">
+              <input
+                type="text"
+                className="makeAdmin_input"
+                {...register("adminemail")}
+                placeholder="Enter Email Address"
+              />
+              <button type="submit">Add Admin</button>
+            </form>
+            <p>Please enter a valid email address</p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,37 @@
+.review_container {
+  font-family: "Poppins";
+}
+.review_container h2 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 36px;
+  text-transform: capitalize;
+}
+.review_form {
+  background-color: #f5f5f5;
+  padding: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 20px;
+}
+.review_submit_btn {
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #b621fe;
+  border-radius: 4px;
+  padding: 5px 10px !important;
+  text-align: center;
+  font-size: 15px;
+  color: #b621fe;
+  font-weight: 500;
+  background: #fff;
+  cursor: pointer;
+}
+.btn.disabled {
+  border: 2px solid red !important;
+  background: #fff !important;
+}
+
+.review_submit_btn:hover {
+  background: #b621fe;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}

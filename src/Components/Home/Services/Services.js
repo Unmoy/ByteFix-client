@@ -7,7 +7,7 @@ import { useState } from "react";
 const Services = () => {
   const [servicesData, setServicesData] = useState([]);
   useEffect(() => {
-    fetch("https://cryptic-shelf-29443.herokuapp.com/showservice")
+    fetch("https://byte-fix-server.vercel.app/showservice")
       .then((res) => res.json())
       .then((data) => setServicesData(data));
   }, []);
@@ -15,15 +15,15 @@ const Services = () => {
     <section className="services_wrapper" id="services">
       <div className="text-center pt-5">
         <h2>SERVICES</h2>
-        <h4>
+        <p>
           We offer a full range of repair services provided by an experienced
           and specialized team
-        </h4>
+        </p>
       </div>
       <div className="container">
         <div className="row">
-          {servicesData.map((service) => (
-            <ServiceDetails service={service}></ServiceDetails>
+          {servicesData.map((service, index) => (
+            <ServiceDetails key={index} service={service}></ServiceDetails>
           ))}
         </div>
       </div>

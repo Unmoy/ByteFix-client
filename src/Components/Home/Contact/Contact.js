@@ -3,7 +3,7 @@ import "./Contact.css";
 import image from "../../../images/newsletter/newsletter.png";
 const Contact = () => {
   return (
-    <section>
+    <section id="contact">
       <div className="container-fluid newsletter">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12">

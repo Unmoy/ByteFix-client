@@ -3,13 +3,13 @@ import "./About.css";
 import aboutImage from "../../../images/About/about-pic.png";
 const About = () => {
   return (
-    <div>
+    <div id="about">
       <section className="container-fluid about_wrapper">
         <div className="row align-items-center">
-          <div class="image col-md-12 col-lg-6">
+          <div className="image col-md-12 col-lg-6">
             <img src={aboutImage} alt="" />
           </div>
-          <div class="col-md-12 col-lg-6 about_content">
+          <div className="col-md-12 col-lg-6 about_content">
             <span>About Us</span>
             <h2>Engaging New Audiences Through Smart Approach</h2>
             <div className="bar2"></div>
@@ -24,7 +24,7 @@ const About = () => {
               augue velit cursus nunc.Donec vitae sapien ut libero venenatis
               faucibus tempus.
             </p>
-            <a href="/" class="discover_btn">
+            <a href="/" className="discover_btn">
               discover more
             </a>
           </div>

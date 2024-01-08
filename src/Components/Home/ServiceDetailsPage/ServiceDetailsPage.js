@@ -24,7 +24,7 @@ const ServiceDetailsPage = () => {
   // console.log(serviceType);
   useEffect(() => {
     window.scroll(0, 0);
-    fetch(`https://cryptic-shelf-29443.herokuapp.com/getservice/${id}`)
+    fetch(`https://byte-fix-server.vercel.app/getservice/${id}`)
       .then((res) => res.json())
       .then((data) => setServiceType(data));
   }, [id]);

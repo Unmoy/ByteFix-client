@@ -3,42 +3,45 @@ import "./BookService.css";
 import { useForm } from "react-hook-form";
 import Payment from "../Payment/Payment";
 import { useAuth } from "../../contexts/AuthContext";
-import { useLocation } from "react-router-dom";
 import creditCardImage from "../../../images/creditcard.png";
+import { useLocation } from "react-router-dom";
+
 const BookService = () => {
   const [serviceType, setServiceType] = useState({});
   const { register, handleSubmit } = useForm();
   const [shipping, setShipping] = useState({});
   const { currentUser } = useAuth();
   const onSubmit = (data) => {
+    console.log(data);
     setShipping(data);
   };
   const location = useLocation();
 
   useEffect(() => {
     console.log(location.state.id);
-    fetch(
-      `https://cryptic-shelf-29443.herokuapp.com/getservice/${location.state.id}`
-    )
+    fetch(`https://byte-fix-server.vercel.app/getservice/${location.state.id}`)
       .then((res) => res.json())
       .then((data) => setServiceType(data));
   }, [location.state.id]);
 
   const handlePaymentSuccess = (paymentId) => {
+    const pending = "Pending";
     const orderDetails = {
       ...currentUser,
       servicetype: {
         name: serviceType.name,
         price: serviceType.price,
-        email: currentUser.user_email,
         address: shipping.address,
+        city: shipping.city,
+        state: shipping.state,
         phone: shipping.phone,
       },
+      process: pending,
       paymentId,
       OrderTime: new Date(),
     };
 
-    fetch("https://cryptic-shelf-29443.herokuapp.com/addorder", {
+    fetch("https://byte-fix-server.vercel.app/addorder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -77,6 +80,7 @@ const BookService = () => {
                 className="form-control"
                 {...register("state", { required: true })}
               />
+
               <label>Mobile No:</label>
               <input
                 className="form-control"

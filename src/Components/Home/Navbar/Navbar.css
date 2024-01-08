@@ -1,99 +1,118 @@
-@import url("https://fonts.googleapis.com/css2?family=Wallpoet&display=swap");
-.NavbarItems {
-  font-family: "Poppins";
-  background: #f5f5f5;
-  height: 75px;
+.header_nav {
+  background-color: #fff;
+  border: 0;
+  border-bottom: 1px solid #f0f0f0;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  font-size: 1.2rem;
+  padding: 12px 30px !important;
 }
 .logo {
-  cursor: pointer;
-  font-size: 25px;
+  font-size: 1.5em;
+  padding-bottom: 0;
   margin: 0;
-  color: #bc32fd;
+  color: #4579d6;
+  font-weight: 600;
   font-family: "Wallpoet", cursive;
 }
-.menu_icon {
-  display: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-.nav_menu {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  grid-gap: 10px;
-  justify-content: end;
-  width: 65vw;
-  margin-right: 2rem;
-  margin-top: 11px;
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 2px solid #4579d6 !important;
+  border-radius: 0.25rem;
 }
 
-.nav_link {
-  text-transform: uppercase;
-  color: #000;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  font-size: 18px;
+.nav_menu_wrapper {
+  margin-left: 30px;
+}
+.nav_menu_wrapper ul li {
+  padding: 0 10px;
+}
+.nav_menu_container .nav-item a {
+  font-size: 15px;
   font-weight: 500;
+  color: #2e3842;
 }
-.nav_link:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
+.nav_menu_container .nav-item a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2e3842;
+  text-decoration: none;
+}
+.nav_menu_container .nav-item a:hover {
+  color: #4579d6;
+  text-decoration: none;
+}
+
+.nav_menu_right {
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+.nav_menu_right li {
+  align-items: center;
+  display: inline-flex;
+  padding-right: 20px;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.nav_contact {
+  display: inline-block;
+}
+.nav_contact .clinic_icon {
+  font-size: 30px;
+  color: #4579d6;
+}
+.navbar_contact_details {
+  display: inline-block;
+  padding-left: 10px;
+}
+.navbar_contact_details p {
+  color: #484848;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+.navbar_contact_details .contact_info {
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.navbar_login {
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #4579d6;
   border-radius: 4px;
-  transition: all 0.5s ease-out;
+  padding: 10px 15px !important;
+  text-align: center;
+  font-size: 15px;
+  color: #4579d6;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: #fff;
 }
-@media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
+.navbar_login:hover {
+  background: #4579d6;
+  color: #fff;
+  transition: all 0.4s ease-in;
+}
+@media only screen and (max-width: 600px) {
+  .nav_menu_right {
+    margin-top: 20px;
+    margin: 0;
   }
-
-  .nav_menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 380px;
-    position: absolute;
-    top: 80px;
-    left: -100%;
-    opacity: 1;
-    transition: all 0.5s ease;
-    margin-top: 0;
-  }
-  .nav_menu.active {
-    list-style-type: none;
-    background: lightskyblue;
-    left: 0;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 1;
-  }
-  .nav_link {
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-    display: table;
-  }
-  .nav-link:hover {
-    background-color: #7577fa;
-    border-radius: 0;
-  }
-
-  .logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(10%, 73%);
-    font-size: 1.5em;
-  }
-  .menu_icon {
+  .nav_menu_right li {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 64%);
-    font-size: 1.8rem;
+  }
+  .nav_contact .clinic_icon {
+    display: none;
+  }
+  .navbar_contact_details {
+    display: none;
+  }
+  .nav_menu_wrapper ul li {
+    padding: 10px 0;
   }
 }

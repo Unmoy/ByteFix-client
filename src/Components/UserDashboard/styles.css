@@ -1,7 +1,7 @@
 .section_wrapper {
   position: fixed;
   left: 0;
-  background-color: purple;
+  background-color: #fff;
   height: 100vh;
   width: 18vw;
   display: flex;
@@ -28,9 +28,12 @@
   align-items: center;
   gap: 2rem;
 }
-.brand span {
+.brand span .brand_link {
   font-size: 2rem;
-  color: #ffc107;
+  background-color: #6b0f1a;
+  background: -webkit-linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: "Permanent Marker", cursive;
 }
 .links {
@@ -45,19 +48,31 @@
 }
 
 .links li {
-  padding: 8px 65px;
-  border-radius: 0.6rem;
-  color: #fff;
+  padding: 7px 40px;
+  border-radius: 0 30px 30px 0;
+  color: #000;
+  font-family: "Poppins";
+  font-weight: 500;
+  border-left: 3px solid #fff;
+}
+.links li .fonticon {
+  margin-right: 7px;
 }
 
 .links li:hover {
-  background-color: #0fff07;
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  color: #fff;
 }
 .links .navlink {
   text-decoration: none;
 }
 .links .active_link li {
-  background-color: #da0037;
+  color: #8610c7;
+  border-left: 3px solid #8610c7;
+}
+.links .active_link li:hover {
+  color: #fff;
 }
 
 .logout {

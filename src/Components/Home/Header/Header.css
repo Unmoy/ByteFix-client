@@ -66,3 +66,13 @@
   box-shadow: #a6f5be 0px 0.0625em 0.0625em, #a6f5be 0px 0.125em 0.5em,
     #a6f5be 0px 0px 0px 1px inset;
 }
+@media only screen and (max-width: 600px) {
+  .home {
+    margin-top: 100px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .home {
+    margin-top: 50px;
+  }
+}

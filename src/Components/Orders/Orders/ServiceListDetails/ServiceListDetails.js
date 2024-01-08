@@ -1,37 +1,26 @@
 import React from "react";
 
 const ServiceListDetails = ({ services }) => {
-  console.log(services);
   return (
     <div>
-      <table className="table  table-warning table-stripe">
-        <thead>
+      <table className="table">
+        <thead className="thead-primary">
           <tr>
-            <th className="text-secondary text-left" scope="col">
-              Sr No
-            </th>
-            <th className="text-secondary" scope="col">
-              Name
-            </th>
-            <th className="text-secondary" scope="col">
-              Cost
-            </th>
-            <th className="text-secondary" scope="col">
-              To Address
-            </th>
-            <th className="text-secondary" scope="col">
-              Status
-            </th>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Manage</th>
           </tr>
         </thead>
         <tbody>
           {services.map((item, index) => (
-            <tr className="table-warning table-stripe">
-              <td>{index + 1}</td>
+            <tr key={index}>
+              <th scope="row" className="text-center scope">
+                {index + 1}
+              </th>
               <td>{item.servicetype.name}</td>
               <td>{item.servicetype.price}</td>
-              <td>{item.servicetype.address}</td>
-              <td>Pending</td>
+              <td>{item.process}</td>
             </tr>
           ))}
         </tbody>

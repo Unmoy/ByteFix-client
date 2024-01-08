@@ -1,35 +1,27 @@
-import React, { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../../../App";
-import Sidebar from "../../Sidebar/Sidebar";
+import React, { useEffect, useState } from "react";
 import ServiceListDetails from "../ServiceListDetails/ServiceListDetails";
-
+import { useAuth } from "../../../contexts/AuthContext";
+import "./ServiceList.css";
 const ServiceList = () => {
-  // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  // const [serviceList, setServiceList] = useState([]);
+  const [serviceList, setServiceList] = useState([]);
+  const { currentUser } = useAuth();
 
-  // useEffect(() => {
-  //   fetch("https://cryptic-shelf-29443.herokuapp.com/showOrderedService", {
-  //     method: "POST",
-  //     headers: { "content-type": "application/json" },
-  //     body: JSON.stringify({ email: loggedInUser.email }),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => setServiceList(data));
-  // }, []);
+  useEffect(() => {
+    fetch("https://byte-fix-server.vercel.app/showOrderedService", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ email: currentUser.user_email }),
+    })
+      .then((res) => res.json())
+      .then((data) => setServiceList(data));
+  }, [currentUser.user_email]);
+
   return (
-    <div className="row ml-5 pl-5">
-    
-      <div className="col-md-6 mx-auto">
-        {/* <ServiceListDetails services={serviceList}></ServiceListDetails> */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontSize: "100px",
-          }}
-        >
-          Services
+    <div className="container services_list_user">
+      <div className="row">
+        <div className="col-md-10 mx-auto">
+          <h2>My Services Status</h2>
+          <ServiceListDetails services={serviceList}></ServiceListDetails>
         </div>
       </div>
     </div>

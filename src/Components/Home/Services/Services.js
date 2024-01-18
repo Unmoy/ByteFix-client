@@ -6,10 +6,25 @@ import { useState } from "react";
 
 const Services = () => {
   const [servicesData, setServicesData] = useState([]);
+
   useEffect(() => {
-    fetch("https://byte-fix-server.vercel.app/showservice")
-      .then((res) => res.json())
-      .then((data) => setServicesData(data));
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://byte-fix-server.vercel.app/showallservice"
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const data = await response.json();
+        setServicesData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
   return (
     <section className="services_wrapper" id="services">
@@ -22,8 +37,8 @@ const Services = () => {
       </div>
       <div className="container">
         <div className="row">
-          {servicesData.map((service, index) => (
-            <ServiceDetails key={index} service={service}></ServiceDetails>
+          {servicesData?.map((service, index) => (
+            <ServiceDetails key={index} service={service} />
           ))}
         </div>
       </div>

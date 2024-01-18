@@ -1,7 +1,7 @@
 Site Name: ByteFix.
 Live Link: https://bytefix-9f0e7.web.app
 
-Description: here services can be booked by the user and admin can manage all the services and can change the status of a ordered service. admin can also make new admins for better coordination.
+Description: Here services can be booked by the user and admin can manage all the services and can change the status of a ordered service. admin can also make new admins for better coordination.
 used
 react.js,
 react router,

@@ -18,19 +18,32 @@ const Reviews = () => {
   };
 
   useEffect(() => {
-    fetch("https://byte-fix-server.vercel.app/showreviews")
-      .then((res) => res.json())
-      .then((data) => setReviewDetails(data));
-  }, []);
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://byte-fix-server.vercel.app/showreviews"
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
 
+        const data = await response.json();
+        setReviewDetails(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <section className="testimonial_wrapper" id="testimonial">
       <div className="testimonial_header">
         <h3>Our Clients Feedback</h3>
         <div className="bar"></div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Unlocking Insights: Navigating Client Perspectives for Continuous
+          Improvement
         </p>
       </div>
       <div
@@ -41,7 +54,7 @@ const Reviews = () => {
       >
         <div className="testimonial" style={{ width: "50%" }}>
           <Slider {...settings}>
-            {reviewDetails.map((review, index) => {
+            {reviewDetails?.map((review, index) => {
               return <ReviewCard key={index} review={review} />;
             })}
           </Slider>

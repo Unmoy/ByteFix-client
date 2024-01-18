@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
 import { AuthProvider } from "./Components/contexts/AuthContext";
 // Components Import
 import AddService from "./Components/Admin/AddService/AddService";

@@ -13,4 +13,3 @@ export const authentication = app.auth();
 export default app;
 
 //  Connected to sampras acoount
-// Chnage to sohanur gmail
